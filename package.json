@@ -1,0 +1,42 @@
+{
+  "name": "Weather",
+  "version": "1.0.0",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dist_commit": "git add dist && git commit -m 'Initial dist subtree commit'",
+    "dist_push": "git subtree push --prefix dist origin gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Enchengzw/Restaurant_page.git"
+  },
+  "author": "Encheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enchengzw/Restaurant_page/issues"
+  },
+  "homepage": "https://github.com/Enchengzw/Restaurant_page#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.6.0",
+    "file-loader": "^6.2.0",
+    "globals": "^15.8.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "build": "^0.1.4",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "nconf": "^0.12.1"
+  },
+  "keywords": [],
+  "description": ""
+}
