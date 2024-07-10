@@ -35,8 +35,9 @@ body {
 
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    justify-self: center;
+    align-items: center;
     width: 100%;
     margin: 20px;
 }
@@ -48,6 +49,15 @@ body {
     width: 33%;
     height: 40px;
     font-size: 1.2em;
+}
+
+
+.error_message {
+    visibility: hidden;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: red;
 }
 
 .weather_container {

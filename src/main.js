@@ -3,6 +3,7 @@ import './style.css'
 let city = document.getElementById("city");
 let link = "http://api.weatherapi.com/v1/current.json?key=";
 let key = process.env.KEY;
+let error = document.querySelector('.error_message');
 
 function Day_Data(
   location,
@@ -68,9 +69,16 @@ city.addEventListener("keydown", (event) => {
   if (event.key == 'Enter')
   {
     let url = link + key + "&q=" + city.value;
-    getInfo(url).then(object =>{
+    getInfo(url)
+    .then(object =>{
       display_info(object);
-    });
+      city.value = "";
+      error.style.visibility = "hidden";
+    })
+    .catch(() => {
+      error.style.visibility = "visible";
+      city.value = "";
+    })
   }
 });
 
